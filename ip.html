@@ -19,7 +19,10 @@ ipstatus("195.181.160.247")
 
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.ipdata.co/'+ip+'/threat?api-key=3b65d0a9d967c1538d086dec1c29c82546c10c791802fc502ccc5602');
+//request.open('GET', 'https://api.ipdata.co/'+ip+'/threat?api-key=3b65d0a9d967c1538d086dec1c29c82546c10c791802fc502ccc5602');
+
+request.open('GET', 'https://proxycheck.io/v2/'+ip+'?key=1s0921-964629-468936-156073');
+
 
 request.setRequestHeader('Accept', 'application/json');
 
