@@ -13,7 +13,7 @@
 <script>
 var ip = window.location.search.slice(1);
 
-  $.getJSON("//proxycheck.io/v2/'+ip+'?key=public-981452-987p05-0138ve&vpn=1", function( json ) {
+  $.getJSON("//proxycheck.io/v2/"+ip+"?key=public-981452-987p05-0138ve&vpn=1", function( json ) {
 document.getElementById('h').innerHTML = json.status;
     if ( json.status == "warning" || json.status == "ok" && json[json.ip].proxy == "yes" ) {
       document.body.innerHTML = 'Please deactivate your proxy to access this page.';
