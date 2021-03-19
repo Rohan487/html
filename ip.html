@@ -12,7 +12,7 @@
   <!-- You can modify the URL used below to include our different query flags like how we included &vpn=1. -->
 <script>
 
-  $.getJSON("//proxycheck.io/v2/103.152.5.70?key=public-981452-987p05-0138ve&vpn=1", function( json ) {
+  $.getJSON("//proxycheck.io/v2/103.152.5.70?key=public-981452-987p05-0138ve", function( json ) {
 document.getElementById('h').innerHTML = json[json.ip].proxy;
     if ( json.status == "warning" || json.status == "ok" && json[json.ip].proxy == "yes" ) {
       document.getElementById('h').innerHTML = 'Please deactivate your proxy to access this page.';
