@@ -1,6 +1,6 @@
 <html>
    <head>
-      <title>The jQuery Example</title>
+      <title>RS shortner Api</title>
       <!-- JQuery is required, you can use Google's CDN for it or self-host it. -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -8,16 +8,25 @@
 <body>
 
 <P id='h'></p>
-<!-- You can modify the URL used below to include our different query flags like how we included &vpn=1. 
-  <!-- You can modify the URL used below to include our different query flags like how we included &vpn=1. -->
 <script>
 
-  $.getJSON("//proxycheck.io/v2/103.152.5.70?key=public-981452-987p05-0138ve", function( json ) {
-document.getElementById('h').innerHTML = json[json.ip].proxy;
-    if ( json.status == "warning" || json.status == "ok" && json[json.ip].proxy == "yes" ) {
-      document.getElementById('h').innerHTML = 'Please deactivate your proxy to access this page.';
-    }
+const geturl = window.location.search;
+const urlParams = new URLSearchParams(geturl);
+const product = urlParams.get('key');
+const link = urlParams.get('url');
+var datalink = "uid=key&ulink=link";
+var enc = window.btoa(datalink);
+var enc = enc.replace(/[=]/g,'');
+var final = "https://www.itscybertech.com/?data="+enc;
+
+if(link!=null && key != null){
+
+  $.getJSON("//tinyurl.com/api-create.php?url="+final, function( json ) {
+document.getElementById('h').innerHTML = json;
+   
  });
+
+}
 </script
 
 </body>
