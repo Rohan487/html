@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<p id='h'></p>
+<p id="h"></p>
 <script>
 
 const geturl = window.location.search;
@@ -18,7 +18,8 @@ var datalink = "uid="+id+"&ulink="+link;
 var enc = window.btoa(datalink);
 var enc = enc.replace(/[=]/g,'');
 var final = "https://www.itscybertech.com/?data="+enc;
-document.getElementById('h').innerHTML=final;
+//document.getElementById('h').innerHTML=final;
+document.write(final)
 /*if(link!=null && id != null){
 
   $.get("https://tinyurl.com/api-create.php?url="+final, function( data, status ) {
