@@ -18,7 +18,7 @@ var datalink = "uid="+id+"&ulink="+link;
 var enc = window.btoa(datalink);
 var enc = enc.replace(/[=]/g,'');
 var final = "https://www.itscybertech.com/?data="+enc;
-document.write(final);
+document.getElementById('h').innerHTML=final;
 /*if(link!=null && id != null){
 
   $.get("https://tinyurl.com/api-create.php?url="+final, function( data, status ) {
