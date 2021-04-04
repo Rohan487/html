@@ -21,8 +21,8 @@ var final = "https://www.itscybertech.com/?data="+enc;
 
 if(link!=null && key != null){
 
-  $.getJSON("//tinyurl.com/api-create.php?url="+final, function( json ) {
-document.getElementById('h').innerHTML = json;
+  $.get("https://tinyurl.com/api-create.php?url="+final, function( data, status ) {
+document.getElementById('h').innerHTML = data;
    
  });
 
