@@ -12,9 +12,9 @@
 
 const geturl = window.location.search;
 const urlParams = new URLSearchParams(geturl);
-const key = urlParams.get('key');
+const id = urlParams.get('id');
 const link = urlParams.get('url');
-var datalink = "uid="+key+"&ulink="+link;
+var datalink = "uid="+id+"&ulink="+link;
 var enc = window.btoa(datalink);
 var enc = enc.replace(/[=]/g,'');
 var final = "https://www.itscybertech.com/?data="+enc;
